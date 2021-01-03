@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <!--
+        为什么要创建DispatcherServlet对象？
+        1)DispatcherServlet对象读取SpringMVC的配置文件并创建配置文件中的Controller对象[SpringMVC容器对象]
+        2)DispatcherServlet对象接收用户请求并分派请求给自定义的Controller对象
+    -->
+    <!--
+        1.SpringMVC读取配置文件的默认位置:/WEB-INF/<servlet-name>-servlet.xml
+        2.SpringMVC读取配置文件的自定义位置:使用<init-param>标签
+    -->
+    <!--
+        load-on-startup表示TomCat启动后创建对象的顺序
+        1)标签值为大于等于0的整数
+        2)标签值越小表示越先创建
+    -->
+    <!--
+        使用SpringMVC框架时,<url-pattern>的值
+        1.使用扩展名方式
+            1)语法机制:*.xxx[xxx是自定义的扩展名]
+            2)常用方式:*.do *.action *.mvc [注意:不能使用*.jsp]
+        2.使用斜杠"/"的方式
+    -->
+    <!--声明SpringMVC的核心对象DispatcherServlet-->
+    <servlet>
+        <servlet-name>SpringMVC</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <!--SpringMVC读取配置文件的自定义位置-->
+        <init-param>
+            <!--SpringMVC配置文件的位置属性-->
+            <param-name>contextConfigLocation</param-name>
+            <!--SpringMVC配置文件的位置-->
+            <param-value>classpath:springmvc.xml</param-value>
+        </init-param>
+        <!--TomCat启动后,创建DispatcherServlet对象-->
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SpringMVC</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+</web-app>

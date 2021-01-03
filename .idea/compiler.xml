@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="07-SSM" />
+        <module name="10-Interceptor1" />
+        <module name="03-ReceiveParam" />
+        <module name="12-Interceptor-Permission" />
+        <module name="05-UrlPattern" />
+        <module name="04-Return" />
+        <module name="09-Exception" />
+        <module name="01-HelloSpringMVC" />
+        <module name="11-Interceptor2" />
+        <module name="02-RequestMapping" />
+        <module name="06-Path" />
+        <module name="08-ForwardAndRedirect" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="01-HelloSpringMVC" target="1.8" />
+      <module name="01-HelloSpringMVC (1)" target="1.8" />
+      <module name="02-RequestMapping" target="1.8" />
+      <module name="03-ReceiveParam" target="1.8" />
+      <module name="04-Return" target="1.8" />
+      <module name="05-UrlPattern" target="1.8" />
+      <module name="06-Path" target="1.8" />
+      <module name="07-SSM" target="1.8" />
+      <module name="08-ForwardAndRedirect" target="1.8" />
+      <module name="09-Exception" target="1.8" />
+      <module name="09-ExceptionHandler" target="1.8" />
+      <module name="10-Interceptor1" target="1.8" />
+      <module name="11-Interceptor2" target="1.8" />
+      <module name="12-Interceptor-Permission" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

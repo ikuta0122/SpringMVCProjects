@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--此文件为MyBatis的配置文件-->
+    <!--settings：控制mybatis全局行为-->
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+    <!--mapper(sql映射文件)的位置-->
+    <mappers>
+        <mapper resource="com/ikuta/dao/StudentDao.xml" />
+    </mappers>
+</configuration>

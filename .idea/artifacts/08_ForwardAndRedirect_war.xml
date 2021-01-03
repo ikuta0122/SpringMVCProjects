@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="08-ForwardAndRedirect:war">
+    <output-path>$PROJECT_DIR$/08-ForwardAndRedirect/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>08-ForwardAndRedirect</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="08-ForwardAndRedirect-1.0.0.war">
+      <element id="artifact" artifact-name="08-ForwardAndRedirect:war exploded" />
+    </root>
+  </artifact>
+</component>
